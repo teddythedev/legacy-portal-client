@@ -6,9 +6,12 @@ import App from './App';
 import Dashboard from './pages/Dashboard';
 import Roster from './pages/Roster';
 import NavigationBar from './components/NavigationBar';
+import { setupAxios } from './helpers/axios-setup';
 
 const Root = () => {
    const store = configureStore();
+
+   setupAxios();
 
    return (
        <Provider store={store}>
